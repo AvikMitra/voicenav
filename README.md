@@ -27,10 +27,9 @@ You need an Anthropic API key:
 2. Create an API key (starts with `sk-ant-`)
 3. Paste it into VoiceNav on first launch
 
-New accounts get $5 free credit. Each description costs ~$0.01–0.03.
 
 ## Stack
 
 Chrome Extension (Manifest V3) · Claude Vision API · Web Speech API
 
-No backend. No build step. Just load and go.
+No backend or build step.
