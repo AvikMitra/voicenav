@@ -1,6 +1,6 @@
 # VoiceNav
 
-AI-powered screen description for accessibility. Describes what's on your screen in natural language and reads it aloud — built for users who are blind or have low vision.
+AI-powered screen description for accessibility. Describes what's on your screen in natural language and reads it aloud — built for users who are visually impaired or have low vision.
 
 ## What it does
 
