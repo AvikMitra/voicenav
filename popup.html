@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VoiceNav</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo">
+        <span class="logo-icon">👁</span>
+        <span class="logo-text">VoiceNav</span>
+      </div>
+      <div class="status" id="status">Ready</div>
+    </header>
+
+    <div class="api-setup" id="apiSetup">
+      <label for="apiKey">Anthropic API Key</label>
+      <input type="password" id="apiKey" placeholder="sk-ant-..." />
+      <button id="saveKey">Save Key</button>
+    </div>
+
+    <div class="controls" id="controls" style="display:none">
+      <button class="btn-primary" id="describeBtn">
+        <span>🔍</span> Describe Screen
+      </button>
+      <button class="btn-secondary" id="focusBtn">
+        <span>🎯</span> Click to Focus
+      </button>
+      <div class="mode-row">
+        <span>Auto mode</span>
+        <label class="toggle">
+          <input type="checkbox" id="autoMode">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="output-panel" id="outputPanel" style="display:none">
+      <div class="output-header">
+        <span>Description</span>
+        <div class="output-actions">
+          <button id="replayBtn" title="Replay audio">🔊</button>
+          <button id="clearBtn" title="Clear">✕</button>
+        </div>
+      </div>
+      <div class="output-text" id="outputText"></div>
+      <div class="followup-row">
+        <input type="text" id="followupInput" placeholder="Ask a follow-up question..." />
+        <button id="followupBtn">Ask</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button id="settingsBtn" class="link-btn">Settings</button>
+      <button id="shortcutHint" class="link-btn">⌨ Alt+D to describe</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
