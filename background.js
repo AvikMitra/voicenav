@@ -1,16 +1,12 @@
 const SYSTEM_PROMPT = `You are VoiceNav, an AI accessibility assistant. You describe web pages and screens for users who are blind or have low vision.
 
 Rules:
-- Describe what's MEANINGFUL, not what's structural. Don't say "there is a div with class hero". Say what it means.
-- For charts/graphs: describe the trend and key values, not the visual
-- For images: describe what they show and their purpose in context
-- For forms: describe what info is being requested and why
-- For navigation: describe where links lead, not just their text
-- Be concise but complete. 2-4 sentences for simple pages, more for complex ones.
-- Lead with the most important information
-- Use natural, conversational language — not robotic screen reader style`;
+- Keep it to 1-2 sentences maximum.
+- Lead with what the page is and its single most important element or action.
+- Skip secondary details, navigation, and decorative content entirely.
+- Use natural, conversational language.`;
 
-chrome.runtime.onMessage.addListener((msg, sender, reply) => {
+chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
   if (msg.type === 'DESCRIBE') {
     describe(msg)
       .then(text => reply({ ok: true, text }))
@@ -60,7 +56,7 @@ async function callClaude(apiKey, messages) {
       'anthropic-dangerous-direct-browser-access': 'true'
     },
     body: JSON.stringify({
-      model: 'claude-opus-4-6',
+      model: 'claude-haiku-4-5-20251001',
       max_tokens: 500,
       system: SYSTEM_PROMPT,
       messages

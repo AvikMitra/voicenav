@@ -33,3 +33,6 @@ You need an Anthropic API key:
 Chrome Extension (Manifest V3) · Claude Vision API · Web Speech API
 
 No backend or build step.
+
+## Demo
+[Watch demo](https://www.dropbox.com/scl/fi/pycemblf3oueqsojrr47h/voicenav_demo.mov?rlkey=jh3udoi3xyxfl42b1kgohdbgt&st=f4qpfkyp&dl=0)
